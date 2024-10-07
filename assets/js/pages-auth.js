@@ -122,7 +122,55 @@ document.addEventListener('DOMContentLoaded', function (e) {
           });
         }
       });
+
+      // Manejar el envío del formulario
+      formAuthentication.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evitar el envío normal del formulario
+
+        // Validar el formulario
+        fv.validate().then(function (status) {
+          
+          if (status === 'Valid') {  alert(1);
+            const email = document.getElementById('phone-number-mask').value;
+            const password = document.getElementById('password').value;
+            alert(2);
+            // Hacer la llamada a la API de login
+            fetch('https://backend.confia.mosquedacordova.com/api/login', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: email,
+                password: password
+              })
+            })
+            .then(response => response.json())
+            .then(data => { alert(444);
+              if (data.access_token) {
+                // Guardar el token en localStorage
+                localStorage.setItem('access_token', data.access_token);
+
+                // Redirigir al usuario al dashboard
+                window.location.href = '/dashboard';  // Cambia '/dashboard' por la ruta adecuada
+              } else {
+                // Mostrar un mensaje de error si no se recibe el token
+                document.getElementById('error').textContent = 'Error de login: ' + (data.message || 'Credenciales inválidas');
+              }
+            })
+            .catch(error => { alert(666);
+              // Manejar cualquier error de red
+              console.error('Error:', error);
+              document.getElementById('error').textContent = 'Error de login: Error de red';
+            });
+          }
+        });
+      });
+
     }
+
+    
+  
 
     //  Two Steps Verification
     const numeralMask = document.querySelectorAll('.numeral-mask');
