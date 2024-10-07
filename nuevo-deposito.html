@@ -10,20 +10,38 @@
   data-style="light">
   <head>
 
-    <title>Tiendas</title>
+    <title>Nuevo Depósito</title>
 
     <meta name="description" content="Tiendas" />
 
-    <script type="module">
-      import { headContent } from '/js/head.js';
-      
-      // Crear un contenedor temporal para el contenido
-      const tempContainer = document.createElement('div');
-      tempContainer.innerHTML = headContent;
-      
-      // Añadir el contenido de manera controlada
-      Array.from(tempContainer.children).forEach((node) => document.head.appendChild(node));
-    </script>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+          rel="stylesheet" />
+    
+        <!-- Icons -->
+        <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css?v=1.3337" />
+        <link rel="stylesheet" href="assets/vendor/fonts/tabler-icons.css?v=1.3337" />
+        <link rel="stylesheet" href="assets/vendor/fonts/flag-icons.css?v=1.3337" />
+    
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/vendor/css/rtl/core.css?v=1.3337" />
+        <link rel="stylesheet" href="assets/vendor/css/rtl/theme-bordered.css?v=1.3337" />
+    
+        <link rel="stylesheet" href="assets/css/demo.css?v=1.3337" />
+        
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css?v=1.3337" />
+    
+        <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css?v=1.3337" />
+        <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css?v=1.3337" />
+        <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css?v=1.3337" />
+    
 
     <!-- Helpers -->
     <script src="assets/vendor/js/helpers.js?v=1.3337"></script>
@@ -85,7 +103,13 @@
                     </div>
                   </div>
                 </div>
-
+              </div>
+              <div class="row ">
+                <div class="d-flex align-items-center justify-content-center app-academy-md-80">
+                  <a href="billetera.html" class="btn btn-primary " >
+                    <i class="ti ti-file-dollar ti-md me-5"></i> Ir a tu Billetera 
+                  </a>
+                </div>
               </div>
             </div>
             <!-- / Content -->
