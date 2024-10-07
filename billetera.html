@@ -60,6 +60,21 @@
       <div class="layout-container">
         <!-- Menu -->
           <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+            <div class="app-brand demo">
+              <a href="index.html" class="app-brand-link">
+              
+                <span class="app-brand-text demo menu-text fw-bold">CONFiA</span>
+              </a>
+          
+              <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+                
+                <i class="ti ti-x d-block d-xl-none ti-md align-middle"></i>
+              </a>
+            </div>
+            <div class="menu-inner-shadow"></div>
+            <ul class="menu-inner py-1" id="links-menu">
+
+            </ul>
           </aside>
           <script>
             // Cargar el navbar desde el archivo HTML
@@ -71,7 +86,7 @@
                 return response.text();
               })
               .then(data => {
-                document.getElementById('layout-menu').innerHTML = data; // Insertar el contenido en el contenedor
+                document.getElementById('links-menu').innerHTML = data; // Insertar el contenido en el contenedor
                 document.getElementById('item-propiedades').classList.add('active');
               })
               .catch(error => console.error('Error loading the navbar:', error));
