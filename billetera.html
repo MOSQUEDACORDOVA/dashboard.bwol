@@ -100,23 +100,32 @@
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar">
-            
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="ti ti-menu-2 ti-md"></i>
+              </a>
+            </div>
+          
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse"> 
+              
+          
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+          
+                  <li class="nav-item pe-5" style="border-right: 1px solid #aaa;">
+                      <small class="text-body">Saldo:</small>
+                      <h6 class="mb-0 text-success">$28,450</h6>
+                  </li>
+          
+                  <li class="nav-item ms-2 ">
+                      <a href="depositar.html" class="btn btn-text-primary">
+                          <span class=" ti ti-file-dollar me-2"></span>Depositar
+                      </a>
+                  </li>
+                
+              </ul>
+            </div>
           </nav>
 
-            <script>
-                // Cargar el navbar desde el archivo HTML
-                fetch('componentes/navbar.html')
-                  .then(response => {
-                    if (!response.ok) {
-                      throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                  })
-                  .then(data => {
-                    document.getElementById('layout-navbar').innerHTML = data; // Insertar el contenido en el contenedor
-                  })
-                  .catch(error => console.error('Error loading the navbar:', error));
-            </script>
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
