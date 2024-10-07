@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
           username: {
             validators: {
               notEmpty: {
-                message: 'Please enter username'
+                message: 'Por favor ingresa tu nombre como aparece en tu Cédula'
               },
               stringLength: {
                 min: 6,
-                message: 'Username must be more than 6 characters'
+                message: '¡🤔 Ese nombre es muy corto!'
               }
             }
           },
@@ -43,10 +43,34 @@ document.addEventListener('DOMContentLoaded', function (e) {
               }
             }
           },
+          whatsapp: {
+            validators: {
+              notEmpty: {
+                message: 'Por favor ingresa tu WhatsApp'
+              },
+              stringLength: {
+                min: 10,
+                max: 11,
+                message: 'Por favor ingresa correctamente tu WhatsApp'
+              }
+            }
+          },
+          operation: {
+            validators: {
+              notEmpty: {
+                message: 'Por favor ingresa el número de operación del Pago Móvil'
+              },
+              stringLength: {
+                min: 4,
+                max: 20,
+                message: 'Por favor ingresa el número de operación del Pago Móvil'
+              }
+            }
+          },
           password: {
             validators: {
               notEmpty: {
-                message: 'Please enter your password'
+                message: 'Por favor ingresa la contraseña'
               },
               stringLength: {
                 min: 6,
@@ -74,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
           terms: {
             validators: {
               notEmpty: {
-                message: 'Please agree terms & conditions'
+                message: 'Esto es importante'
               }
             }
           }

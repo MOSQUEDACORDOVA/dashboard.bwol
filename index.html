@@ -1,194 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html
   lang="en"
-  class="light-style customizer-hide"
+  class="light-style layout-wide customizer-hide"
   dir="ltr"
-  data-theme="theme-default"
+  data-theme="theme-bordered"
   data-assets-path="assets/"
-  data-template="vertical-menu-template-no-customizer">
+  data-template="vertical-menu-template-bordered"
+  data-style="light">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Vuexy | Vuexy - Bootstrap Admin Template</title>
+    <title>Regístrate para comprar dólares al mejor precio</title>
 
-    <meta name="description" content="" />
+    <meta name="description" content="Regístrate para comprar dólares al mejor precio" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+    <script type="module">
+      import { headContent } from '/js/head.js';
+      
+      // Crear un contenedor temporal para el contenido
+      const tempContainer = document.createElement('div');
+      tempContainer.innerHTML = headContent;
+      
+      // Añadir el contenido de manera controlada
+      Array.from(tempContainer.children).forEach((node) => document.head.appendChild(node));
+    </script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet" />
+    <!-- Vendor -->
+    <link rel="stylesheet" href="assets/vendor/libs/@form-validation/form-validation.css?v=1.3336" />
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" />
-    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" />
-    <link rel="stylesheet" href="assets/css/demo.css" />
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="assets/vendor/css/pages/page-auth.css?v=1.3336" />
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js?v=1.3336"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="assets/vendor/js/template-customizer.js?v=1.3336"></script>
+
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js?v=1.3336"></script>
+
+    <style>
+      @media (max-width: 992px) {
+        .app-brand{
+          width: 100%;
+          display: flex;
+          border-bottom: 1px solid #aaa;
+          padding-bottom: 16px;
+          left: 0;
+          padding-left: 32px;
+        }
+      }
+      .auth-cover-bg{
+        top: 0;
+        position: sticky !important;
+      }
+    </style>
   </head>
 
   <body>
     <!-- Content -->
-    <div class="container flex-grow-1 container-p-y my-2">
-      <h3>Thank you for purchasing Vuexy! 😇</h3>
-      <p>
-        Easily navigate to demos, documentation, support or changelog using below links.<br />
-        Git repo access link helps you to request the repository access, once approved one can use the repository to
-        raise an issus(support, feature request & feedback) and track future updates & releases.
-      </p>
-      <!-- Examples -->
-      <div class="row mt-sm-4 mt-3">
-        <div class="col-12 mb-3">
-          <div class="card">
-            <h5 class="card-header">Template Links</h5>
-            <!-- Template Demo Links -->
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Full Version</th>
-                  <th scope="col">Starter</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="html/vertical-menu-template/index.html" target="_blank">Vertical Menu Template</a></td>
-                  <td>
-                    <a href="html-starter/vertical-menu-template/index.html" target="_blank">Vertical Menu Template</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="html/vertical-menu-template-no-customizer/index.html" target="_blank"
-                      >Vertical Menu Template</a
-                    >
-                    (Without Customizer)
-                  </td>
-                  <td>
-                    <a href="html-starter/vertical-menu-template-no-customizer/index.html" target="_blank"
-                      >Vertical Menu Template</a
-                    >
-                    (Without Customizer)
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="html/horizontal-menu-template/index.html" target="_blank">Horizontal Menu Template</a>
-                  </td>
-                  <td>
-                    <a href="html-starter/horizontal-menu-template/index.html" target="_blank"
-                      >Horizontal Menu Template</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="html/horizontal-menu-template-no-customizer/index.html" target="_blank"
-                      >Horizontal Menu Template</a
-                    >
-                    (Without Customizer)
-                  </td>
-                  <td>
-                    <a href="html-starter/horizontal-menu-template-no-customizer/index.html" target="_blank"
-                      >Horizontal Menu Template</a
-                    >
-                    (Without Customizer)
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="html/front-pages/landing-page.html" target="_blank">Front Pages</a>
-                  </td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="html/front-pages-no-customizer/landing-page.html" target="_blank">Front Pages</a>
-                    (Without Customizer)
-                  </td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>
-            <!--/ Template Demo Links -->
+
+    <div class="authentication-wrapper authentication-cover">
+      <!-- Logo -->
+      <a href="index.html" class="app-brand auth-cover-brand">
+        <span class="app-brand-text demo text-heading fw-bold">CONFiA</span>
+      </a>
+      <!-- /Logo -->
+      <div class="authentication-inner row m-0">
+        <!-- /Left Text -->
+        <div class="d-none d-lg-flex col-lg-8 p-0">
+          <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
+            <img
+              src="assets/img/illustrations/auth-register-illustration-light.png"
+              alt="auth-register-cover"
+              class="my-5 auth-illustration"
+              data-app-light-img="illustrations/auth-register-illustration-light.png"
+              data-app-dark-img="illustrations/auth-register-illustration-dark.png" />
+
+            <img
+              src="assets/img/illustrations/bg-shape-image-light.png"
+              alt="auth-register-cover"
+              class="platform-bg"
+              data-app-light-img="illustrations/bg-shape-image-light.png"
+              data-app-dark-img="illustrations/bg-shape-image-dark.png" />
           </div>
         </div>
+        <!-- /Left Text -->
 
-        <div class="col-12 mb-3">
-          <div class="card">
-            <h5 class="card-header">Other Important Links</h5>
-            <!-- Other Links -->
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">URL</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>License</td>
-                  <td>
-                    <a href="https://themeforest.net/licenses/standard" target="_blank"
-                      >https://themeforest.net/licenses/standard</a
-                    >
-                  </td>
-                </tr>
+        <!-- Register -->
+        <div class="d-flex col-12 col-lg-4 align-items-center authentication-bg p-sm-12 p-6">
+          <div class="w-px-400 mt-12 pt-5 mx-auto">
+            <h4 class="mb-1">Comencemos 🚀</h4>
+            <p class="mb-6">Solo debes <b>hacer un pago móvil</b> con el monto que deseas comprar y registrarte con el número de operación!</p>
+            <div id="datos-pago-movil">
+            </div>
 
-                <tr>
-                  <td>Documentation</td>
-                  <td>
-                    <a href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/" target="_blank"
-                      >https://demos.pixinvent.com/vuexy-html-admin-template/documentation/</a
-                    >
-                  </td>
-                </tr>
+            <script>
+              // Cargar componente
+              fetch('componentes/datos-pago-movil.html')
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.text();
+                })
+                .then(data => {
+                  document.getElementById('datos-pago-movil').innerHTML = data; // Insertar el contenido en el contenedor
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+            </script>
 
-                <tr>
-                  <td>Changelog</td>
-                  <td>
-                    <a href="https://demos.pixinvent.com/vuexy/changelog.html" target="_blank"
-                      >https://demos.pixinvent.com/vuexy/changelog.html</a
-                    >
-                  </td>
-                </tr>
 
-                <tr>
-                  <td>GitHub Repository Access</td>
-                  <td>
-                    <a href="https://tools.pixinvent.com/github/github-access" target="_blank"
-                      >https://tools.pixinvent.com/github/github-access</a
-                    >
-                  </td>
-                </tr>
+            <a href="#operacio-input" class="btn btn-primary d-grid w-100 mb-12">Continuar</a>
 
-                <tr>
-                  <td>Support</td>
-                  <td>
-                    <a href="https://pixinvent.ticksy.com/" target="_blank">https://pixinvent.ticksy.com/</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!--/ Other Links -->
+            <div class="divider my-6">
+              <div class="divider-text">¿Listo?</div>
+            </div>
+
+            <form id="formAuthentication" class="mb-6" action="nuevo-registro.html" method="GET">
+              <div class="mb-6">
+                <label for="operacio-input" class="form-label">
+                  Ingresa el número de la operación que hiciste
+                </label>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    name="operation"
+                    class="form-control"
+                    placeholder="Ingresa el número de operación"
+                    aria-label="Amount (to the nearest dollar)"
+                    id="operacio-input" />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label for="username" class="form-label">Nombre <b>(Como aparece en tu cédula)</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="Ingresa tu nombre"
+                  />
+              </div>
+              
+              <div class="mb-6">
+                <label class="form-label" for="phone-number-mask">WhatsApp</label>
+                <div class="input-group ">
+                  <span class="input-group-text">VE (+58)</span>
+                  <input
+                    type="number"
+                    name="whatsapp"
+                    id="phone-number-mask"
+                    class="form-control phone-number-mask"
+                    placeholder="424 945 692831" />
+                </div>
+                <div class="alert alert-info mt-2" role="alert">
+                  🤔 Por qué WhatsApp? 
+                  Queremos tener una comunicación fluida contigo mientras estás aquí.
+                </div>
+              </div>
+              
+              <div class="mb-6 form-password-toggle">
+                <label class="form-label" for="password">Contraseña</label>
+                <div class="input-group input-group-merge">
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                    aria-describedby="password" />
+                  <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
+                </div>
+              </div>
+
+              <div class="mb-6 mt-8">
+                <div class="form-check mb-8 ms-2">
+                  <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
+                  <label class="form-check-label" for="terms-conditions">
+                    No estoy usando datos de otra persona para comprar dólares en esta plataforma.
+                  </label>
+                </div>
+              </div>
+              <button class="btn btn-primary d-grid w-100">Registrarme</button>
+            </form>
+
+            <p class="text-center">
+              <span>¿Ya estás registrado?</span>
+              <a href="auth-login-cover.html">
+                <span>Ingresa aquí 😃</span>
+              </a>
+            </p>
+
           </div>
         </div>
-      </div>
-
-      <div class="text-big py-4">
-        <p>
-          Please don’t forget to rate and share <strong>Vuexy</strong> and leave a nice review, it means a lot for us
-          and our theme. Simply log in to
-          <a href="https://themeforest.net/" target="_blank"><strong>https://themeforest.net/</strong></a> Account, go
-          to Downloads section and click 5 stars next to the <strong>Vuexy</strong> template.
-        </p>
+        <!-- /Register -->
       </div>
     </div>
+
     <!-- / Content -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="assets/vendor/libs/jquery/jquery.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/popper/popper.js?v=1.3336"></script>
+    <script src="assets/vendor/js/bootstrap.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/hammer/hammer.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js?v=1.3336"></script>
+    <script src="assets/vendor/js/menu.js?v=1.3336"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/@form-validation/popular.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/@form-validation/bootstrap5.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/@form-validation/auto-focus.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/clipboard/clipboard.js?v=1.3336"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js?v=1.3336"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/pages-auth.js?v=1.3336"></script>
+    <script src="assets/js/extended-ui-misc-clipboardjs.js?v=1.3336"></script>
   </body>
 </html>

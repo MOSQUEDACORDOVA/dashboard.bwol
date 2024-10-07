@@ -1,0 +1,313 @@
+<!doctype html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-bordered"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-bordered"
+  data-style="light">
+  <head>
+
+    <title>Billetera</title>
+
+    <meta name="description" content="Billetera" />
+
+    <script type="module">
+      import { headContent } from '/js/head.js';
+      
+      // Crear un contenedor temporal para el contenido
+      const tempContainer = document.createElement('div');
+      tempContainer.innerHTML = headContent;
+      
+      // Añadir el contenido de manera controlada
+      Array.from(tempContainer.children).forEach((node) => document.head.appendChild(node));
+    </script>
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js?v=1.3336"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js?v=1.3336"></script>
+
+    
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+          <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          </aside>
+          <script>
+            // Cargar el navbar desde el archivo HTML
+            fetch('componentes/menu.html')
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.text();
+              })
+              .then(data => {
+                document.getElementById('layout-menu').innerHTML = data; // Insertar el contenido en el contenedor
+                document.getElementById('item-propiedades').classList.add('active');
+              })
+              .catch(error => console.error('Error loading the navbar:', error));
+          </script>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+
+          <!-- Navbar -->
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar">
+            
+          </nav>
+
+            <script>
+                // Cargar el navbar desde el archivo HTML
+                fetch('componentes/navbar.html')
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                  })
+                  .then(data => {
+                    document.getElementById('layout-navbar').innerHTML = data; // Insertar el contenido en el contenedor
+                  })
+                  .catch(error => console.error('Error loading the navbar:', error));
+            </script>
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row g-6">
+                <!-- Last Transaction -->
+                <div class="col-lg-5">
+                  <div class="card ">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="card-title m-0 me-2">
+                        Depósitos
+                      </h5>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-borderless border-top">
+                        <thead class="border-bottom">
+                          <tr>
+                            <th>MONTO</th>
+                            <th>FECHA</th>
+                            <th>ESTADO</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="pt-5">
+                              <p class="mb-0 text-heading">+$1,678</p>
+                            </td>
+                            
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <p class="mb-0 text-heading">Recibido</p>
+                                <small class="text-body text-nowrap">17 Mar 2022</small>
+                              </div>
+                            </td>
+                            <td class="pt-5"><span class="badge bg-label-success">Aprobado</span></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="mb-0 text-heading">-$839</p>
+                            </td>
+                            <td>
+                              <div class="d-flex flex-column">
+                                <p class="mb-0 text-heading">Recibido</p>
+                                <small class="text-body text-nowrap">12 Feb 2022</small>
+                              </div>
+                            </td>
+                            <td><span class="badge bg-label-danger">Rechazado</span></td>
+                            
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                              <p class="mb-0 text-heading">+$2,345</p>
+                            </td>
+                            <td>
+                              <div class="d-flex flex-column">
+                                <p class="mb-0 text-heading">Registrado</p>
+                                <small class="text-body text-nowrap">8 Jan 2022</small>
+                              </div>
+                            </td>
+                            <td><span class="badge bg-label-secondary">Pending</span></td>
+                            
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Last Transaction -->
+
+                <!-- Last Transaction -->
+                <div class="col-lg-7">
+                  <div class="card ">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="card-title m-0 me-2">
+                        Retiros
+                      </h5>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-borderless border-top">
+                        <thead class="border-bottom">
+                          <tr>
+                            <th>MONTO</th>
+                            <th>FECHA</th>
+                            <th>MOTIVO</th>
+                            <th>ESTADO</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="pt-5">
+                              <p class="mb-0 text-heading">-$1,678</p>
+                            </td>
+                            
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <p class="mb-0 text-heading">Recibido</p>
+                                <small class="text-body text-nowrap">17 Mar 2022</small>
+                              </div>
+                            </td>
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <small class="text-body text-nowrap">Compra</small>
+                                <p class="mb-0 text-heading">#123456789</p>
+                                
+                              </div>
+                            </td>
+                            <td class="pt-5"><span class="badge bg-label-success">Aprobado</span></td>
+                          </tr>
+                          <tr>
+                            <td class="pt-5">
+                              <p class="mb-0 text-heading">-$1,678</p>
+                            </td>
+                            
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <p class="mb-0 text-heading">Recibido</p>
+                                <small class="text-body text-nowrap">17 Mar 2022</small>
+                              </div>
+                            </td>
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <small class="text-body text-nowrap">Compra</small>
+                                <p class="mb-0 text-heading">#123456789</p>
+                                
+                              </div>
+                            </td>
+                            <td class="pt-5"><span class="badge bg-label-success">Aprobado</span></td>
+                          </tr>
+                          <tr>
+                            <td class="pt-5">
+                              <p class="mb-0 text-heading">-$1,678</p>
+                            </td>
+                            
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <p class="mb-0 text-heading">Recibido</p>
+                                <small class="text-body text-nowrap">17 Mar 2022</small>
+                              </div>
+                            </td>
+                            <td class="pt-5">
+                              <div class="d-flex flex-column">
+                                <small class="text-body text-nowrap">Envió a:</small>
+                                <p class="mb-0 text-heading">0424-99-999-999</p>
+                                
+                              </div>
+                            </td>
+                            <td class="pt-5"><span class="badge bg-label-success">Aprobado</span></td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Last Transaction -->
+                
+              </div>
+            </div>
+            <!-- / Content -->
+            
+
+            <!-- Footer -->
+            <footer 
+              class="content-footer footer bg-footer-theme"
+              id="footer">
+            </footer>
+            <script>
+              // Cargar el navbar desde el archivo HTML
+              fetch('componentes/footer.html')
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.text();
+                })
+                .then(data => {
+                  document.getElementById('footer').innerHTML = data; // Insertar el contenido en el contenedor
+                })
+                .catch(error => console.error('Error loading the navbar:', error));
+            </script>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+
+      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+      <div class="drag-target"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="assets/vendor/libs/jquery/jquery.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/popper/popper.js?v=1.3336"></script>
+    <script src="assets/vendor/js/bootstrap.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/hammer/hammer.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/i18n/i18n.js?v=1.3336"></script>
+    <script src="assets/vendor/libs/typeahead-js/typeahead.js?v=1.3336"></script>
+    <script src="assets/vendor/js/menu.js?v=1.3336"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js?v=1.3336"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js?v=1.3336"></script>
+
+    <!-- Page JS -->
+
+    
+ </body>
+</html>
